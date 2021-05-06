@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form | Login and Sign up</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="btns">
+		<button onclick="login()">Login</button><br><br>
+		<button onclick="signup()">SignUp</button>
+	</div>
+	<div class="container">
+	<!--LOGIN FORM-->
+		<div class="login-form" style="display: none;" id="login">
+			<img src="whitecross.png" onclick="loginclose()">
+			<form>
+				<label for="E-MAIL">
+					<input type="text" name="e-mail" placeholder="E-mail">
+				</label><br><br>
+				<label for="Password" >
+					<input type="password" name="password" placeholder="Password">
+				</label><br><br>
+				<button type="submit">Login</button>
+			</form>
+		</div>
+
+	<!--REGISTRATION FORM-->
+		
+		<div class="signup-form" style="display:none; ;" id="signup">
+			<img src="whitecross.png" onclick="signupclose()">
+			<form>
+				<label for="Name">
+					<input type="text" name="name" placeholder="Name">
+				</label><br>
+				<label for="E-mail" >
+					<input type="text" name="E-mail" placeholder="E-mail">
+				</label><br>
+				<label for="Confirm E-mail" >
+					<input type="text" name="CE-mail" placeholder="Confirm E-mail">
+				</label><br>
+				<label for="password" >
+					<input type="password" name="Password" placeholder="Password">
+				</label><br><br>
+				<button type="submit">Sign Up</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script>
+	function login(){
+		document.getElementById("login").style.display = "block";
+		document.getElementById("signup").style.display = "none";
+	}
+	function signup(){
+		document.getElementById("signup").style.display = "block";
+		document.getElementById("login").style.display = "none";
+	}
+	function loginclose(){
+		document.getElementById("login").style.display = "none";
+	}
+	function signupclose(){
+		document.getElementById("signup").style.display = "none";
+	}
+</script>
+</html>
